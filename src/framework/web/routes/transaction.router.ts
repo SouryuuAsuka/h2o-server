@@ -5,7 +5,7 @@ import transactionControllerCreate from '@presentation/controllers/transaction.c
 
 const router = Router();
 
-export const projectRouter = (dependencies:IDependency) => {
+export const transactionRouter = (dependencies:IDependency) => {
   const projectController = transactionControllerCreate(dependencies);
 
   router.use(appInit);
