@@ -62,7 +62,7 @@ const userControllerCreate = (dependencies: IDependency) => {
         }
       })
     } catch (err: any) {
-      return res.status(500).json({
+      return res.status(400).json({
         status: 'error',
         message: err.message ?? "Server error"
       })
