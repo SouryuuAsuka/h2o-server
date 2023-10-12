@@ -19,7 +19,7 @@ const taskUseCase = () => {
             const type = typesArray[j];
             const random = Math.random();
             console.log("Math.random() - "+ random + " dist.quantile - "+ dist.quantile(random));
-            const amount = base * dist.quantile(random);
+            const amount = Math.floor(base * dist.quantile(random));
             trancations.push({
               division,
               date,
