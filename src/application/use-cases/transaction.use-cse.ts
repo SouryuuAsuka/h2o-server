@@ -33,7 +33,7 @@ const taskUseCase = () => {
           })
         }
       }
-      timestamp.setDate(-1);
+      timestamp.setDate(timestamp.getDate()-1);
     }
     return { trancations }
   }
