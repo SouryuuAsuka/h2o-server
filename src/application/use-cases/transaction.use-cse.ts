@@ -3,7 +3,7 @@ const LogNormal = require('@stdlib/stats-base-dists-lognormal').LogNormal;
 const taskUseCase = () => {
 
   const get = async (interval: string = 'week') => {
-    const base = 8000;
+    const base = 5000;
     const dist = new LogNormal(1.0, 1.0);
     var qu = dist.cdf(0.5);
     let trancations = [];
