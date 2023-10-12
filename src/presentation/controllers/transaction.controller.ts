@@ -1,7 +1,7 @@
 import { IDependency } from '@application/ports/IDependency';
 import transactionUseCase from '@application/use-cases/transaction.use-cse';
 
-const projectControllerCreate = (dependencies: IDependency) => {
+const transactionControllerCreate = (dependencies: IDependency) => {
   const {
     get,
   } = transactionUseCase();
@@ -9,12 +9,10 @@ const projectControllerCreate = (dependencies: IDependency) => {
   const getController = async (req: any, res: any, next: any) => {
     try {
       const interval = req.query?.i
-      const projects = await get(interval);
+      const data= await get(interval);
       return res.status(200).json({
         status: 'success',
-        data: {
-          projects
-        },
+        data
       })
     } catch (err: any) {
       return res.status(500).json({
@@ -28,4 +26,4 @@ const projectControllerCreate = (dependencies: IDependency) => {
   }
 }
 
-export default projectControllerCreate;
+export default transactionControllerCreate;

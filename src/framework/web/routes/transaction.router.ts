@@ -6,10 +6,10 @@ import transactionControllerCreate from '@presentation/controllers/transaction.c
 const router = Router();
 
 export const transactionRouter = (dependencies:IDependency) => {
-  const projectController = transactionControllerCreate(dependencies);
+  const transactionController = transactionControllerCreate(dependencies);
 
   router.use(appInit);
 
-  router.get('/', projectController.getController);
+  router.get('/', transactionController.getController);
   return router;
 }
