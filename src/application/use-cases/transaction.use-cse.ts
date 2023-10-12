@@ -17,7 +17,9 @@ const taskUseCase = () => {
           const division = divisionsArray[j];
           for (let l = 0; l < typesArray.length; l++) {
             const type = typesArray[j];
-            const amount = base * dist.cdf(Math.random());
+            const random = Math.random();
+            console.log("Math.random() - "+ random + " dist.cdf - "+ dist.cdf(random));
+            const amount = base * dist.cdf(random);
             trancations.push({
               division,
               date,
