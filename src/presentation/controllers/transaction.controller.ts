@@ -8,7 +8,7 @@ const transactionControllerCreate = (dependencies: IDependency) => {
 
   const getController = async (req: any, res: any, next: any) => {
     try {
-      const interval = req.query?.i
+      const interval = req.query?.i;
       const {trancations}= await get(interval);
       return res.status(200).json({
         status: 'success',
