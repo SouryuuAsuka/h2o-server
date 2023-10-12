@@ -18,8 +18,8 @@ const taskUseCase = () => {
           for (let l = 0; l < typesArray.length; l++) {
             const type = typesArray[j];
             const random = Math.random();
-            console.log("Math.random() - "+ random + " dist.cdf - "+ dist.cdf(random));
-            const amount = base * dist.cdf(random);
+            console.log("Math.random() - "+ random + " dist.quantile - "+ dist.quantile(random));
+            const amount = base * dist.quantile(random);
             trancations.push({
               division,
               date,
