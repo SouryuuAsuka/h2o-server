@@ -22,7 +22,7 @@ const taskUseCase = () => {
       for (let j = 0; j < divisionsArray.length; j++) {
         const division = divisionsArray[j];
         for (let l = 0; l < typesArray.length; l++) {
-          const type = typesArray[j];
+          const type = typesArray[l];
           const random = Math.random();
           const amount = Math.floor(base * dist.quantile(random));
           trancations.push({
